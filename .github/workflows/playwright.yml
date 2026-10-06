@@ -29,6 +29,14 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
+      env:
+        BASE_URL: https://opensource-demo.orangehrmlive.com
+        VALID_USERNAME: ${{ secrets.VALID_USERNAME }}
+        VALID_PASSWORD: ${{ secrets.VALID_PASSWORD }}
+        INVALID_USERNAME: ${{ secrets.INVALID_USERNAME }}
+        INVALID_PASSWORD: ${{ secrets.INVALID_PASSWORD }}
+        ESS_USERNAME: ${{ secrets.ESS_USERNAME }}
+        ESS_PASSWORD: ${{ secrets.ESS_PASSWORD }}
       run: npx playwright test
 
     - uses: actions/upload-artifact@v4
