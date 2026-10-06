@@ -1,0 +1,24 @@
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+.features-gen/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Performance Testing (k6)
+/summary.json
+/k6-report.html
+
+# System & OS Files
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
